@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+ <head>
+
+   <meta charset="UTF-8">
+   <title>Lottery Generator</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+ </head>
+
+ <body>
+
+   <div class="jumbotron">
+
+     <h1 class="text-center">Powerball!</h1>
+
+     <div class="text-center">
+
+      <!-- Here we have our button with id random-button -->
+      <button id="lotto-button" class="btn btn-primary btn-lg"><h1>Generate lotto number!</h1></button>
+
+    </div>
+
+<div class = "container-fluid">
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="1" fill="red"><h6 id="ball1"></h6></circle>
+</svg>
+     </div>
+
+
+     <div class="panel panel-default">
+        <div class="panel-heading">
+            Hey Look! Those Buttons are circular!!
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <h4>Normal Circle Buttons</h4>
+            <button type="button" class="btn btn-default btn-circle"><i class="fa fa-check"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i>
+            </button>
+            <button type="button" class="btn btn-success btn-circle"><i class="fa fa-link"></i>
+            </button>
+            <button type="button" class="btn btn-info btn-circle"><i class="fa fa-check"></i>
+            </button>
+            <button type="button" class="btn btn-warning btn-circle"><i class="fa fa-times"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-heart"></i>
+            </button>
+            <br>
+            <br>
+            <h4>Large Circle Buttons</h4>
+            <button type="button" class="btn btn-default btn-circle btn-lg"><i class="fa fa-check"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-circle btn-lg"><i class="fa fa-list"></i>
+            </button>
+            <button type="button" class="btn btn-success btn-circle btn-lg"><i class="fa fa-link"></i>
+            </button>
+            <button type="button" class="btn btn-info btn-circle btn-lg"><i class="fa fa-check"></i>
+            </button>
+            <button type="button" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-times"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-heart"></i>
+            </button>
+            <br>
+            <br>
+            <h4>Extra Large Circle Buttons</h4>
+            <button type="button" class="btn btn-default btn-circle btn-xl"><i class="fa fa-check"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa fa-list"></i>
+            </button>
+            <button type="button" class="btn btn-success btn-circle btn-xl"><i class="fa fa-link"></i>
+            </button>
+            <button type="button" class="btn btn-info btn-circle btn-xl"><i class="fa fa-check"></i>
+            </button>
+            <button type="button" class="btn btn-warning btn-circle btn-xl"><i class="fa fa-times"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="fa fa-heart"></i>
+            </button>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+
+
+
+<script>
+ $(document).ready(function() {
+
+});
+// set variables 
+var  Ball1;
+var  Ball2;
+var  Ball3;
+var  Ball4;
+var  Ball5;
+var  Ball6;
+
+
+//make random number generator
+var ranNum = Math.floor(Math.random() * 70);     // returns a number between 0 and 69
+console.log(ranNum);
+
+$("#ball1").text(ranNum);
+
+$("#lotto-button").click(ranNum);
+
+// Try it Yourself 
+
+// Loop index of previous number
+
+//array to push #
+// Var = goButton
+
+
+
+   </script>
+
+ </body>
+
+</html>
+
+

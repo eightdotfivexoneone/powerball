@@ -1,0 +1,50 @@
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+#container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#p {
+  font-family: 'Libre Franklin', sans-serif;
+  color: BLACK;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: center;
+  line-height: 1.25em;
+}
+
+#h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  color: BLACK;
+  font-size: 72px;
+  font-weight: 900;
+  text-align: center;
+  vertical-align: center;
+  line-height: 1.25em;
+}
+
+
+
+.circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #fff;
+  line-height: 500px;
+  text-align: center;
+  background: #000
+}
+
+#grad-bg {
+  background: linear-gradient(to bottom right, black, white);
+}
+
+#grad-btn {
+  background: radial-gradient(grey, white);
+}

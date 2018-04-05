@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Lottery Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+
+   <h1 class="text-center">Powerball!</h1>
+   <br>
+   <div class="text-center">
+
+       <button class="btn btn-primary btn-lg" id="random-button"><h1><span class="glyphicon glyphicon-play"></span></h1></button>
+
+     </div>
+ </div>
+
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-2">
+       <canvas id="circle1"></canvas>
+     </div>
+     <div class="col-lg-2">
+      <canvas id="circle2"></canvas>
+     </div>
+     <div class="col-lg-2">
+       <canvas id="circle3">
+     </div>
+     <div class="col-lg-2">
+       <canvas id="circle4">
+     </div>
+     <div class="col-lg-2">
+        <canvas id="circle5">
+     </div>
+     <div class="col-lg-2">
+       <canvas id="circle6">
+     </div>
+   </div>
+ </div>
+
+
+
+
+
+<script>
+ 
+     function draw(number, canvas){
+
+         var ctx = canvas.getContext('2d');
+         var X = canvas.width / 2;
+         var Y = canvas.height / 2;
+         var R = 30;
+
+         ctx.fillStyle = "black";
+         ctx.font = "bold 20px Arial";
+         ctx.fillText(number, (canvas.width / 2) -10, (canvas.height / 2) + 8);
+
+         ctx.beginPath();
+         ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+         ctx.lineWidth = 3;
+         ctx.strokeStyle = '#FF0000';
+         ctx.stroke();
+
+   }      
+
+   
+   function random(ran){
+       var ran = Math.floor(Math.random() * 70);     // returns a number between 0 and 69
+       return ran;
+   }
+
+ 
+$(document).ready(function() {
+
+
+$(".jumbotron").on("click", "#random-button", function() {
+
+var  Ball1 = draw(random(1), document.getElementById('circle1'));
+var  Ball2 = draw(random(1), document.getElementById('circle2'));
+var  Ball3 = draw(random(1), document.getElementById('circle3'));
+var  Ball4 = draw(random(1), document.getElementById('circle4'));
+var  Ball5 = draw(random(1), document.getElementById('circle5'));
+var  Ball6 = draw(random(1), document.getElementById('circle6'));
+
+
+
+});
+
+
+});
+
+    function draw(number){
+       var canvas = document.getElementById('circle');
+       if (canvas.getContext){
+         var ctx = canvas.getContext('2d');
+         var X = canvas.width / 2;
+         var Y = canvas.height / 2;
+         var R = 30;
+
+         ctx.fillStyle = "black";
+         ctx.font = "bold 20px Arial";
+         ctx.fillText(number, (canvas.width / 2) -10, (canvas.height / 2) + 8);
+
+         ctx.beginPath();
+         ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+         ctx.lineWidth = 3;
+         ctx.strokeStyle = '#FF0000';
+         ctx.stroke();
+       }
+   }
+
+ctx.fillText(number, (canvas.width / 2) -10, (canvas.height / 2) + 8);
+
+  </script>
+
+</body>
+
+</html>
